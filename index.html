@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Automatización de Atención al Cliente | AIONIX</title>
   <meta name="description" content="AIONIX automatiza la atención al cliente con inteligencia artificial. Ideal para restaurantes, clínicas y negocios locales.">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBD52DZTB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9WBD52DZTB');
+    </script>
+
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +49,7 @@
   <!-- QUÉ OFRECEMOS -->
   <section class="py-16 px-6 bg-white">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">¿Qué hacemos en AIONIX?</h2>
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">¿Qué hacemos en AIONIX?</h2>
       <ul class="text-lg space-y-4 text-left sm:text-center">
         <li>✅ Respuestas automáticas por WhatsApp</li>
         <li>✅ Confirmación y gestión de citas</li>
@@ -108,6 +121,15 @@
   <footer class="text-center text-sm py-6 text-gray-500">
     © 2025 AIONIX · Automatización con IA · <a href="#" class="underline">Política de privacidad</a>
   </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
 <script src="/js/main.js"></script>
 </body>
 </html>
