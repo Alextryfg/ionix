@@ -19,3 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
   // - Scroll al formulario
   // - Detectar clics en CTA para tracking (GA, etc.)
 });
+
+
+
+
+  // Elimina el preloader tras la animación
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) preloader.remove(); // o preloader.style.display = "none";
+  }, 3200); // tiempo igual al de la animación
+
+
+
+
+

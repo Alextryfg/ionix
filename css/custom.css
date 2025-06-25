@@ -1,30 +1,161 @@
 /* custom.css */
 
-/* Si quieres personalizar scroll suave */
+/* === Variables de color según logo3.jpg === */
+:root {
+  --aionix-green: #76d84b;
+  --aionix-blue: #00c5f7;
+  --aionix-dark: #111827;
+  --aionix-dark-light: #1e1e2f;
+  --aionix-light: #f9fafb;
+}
+
+/* Scroll suave */
 html {
   scroll-behavior: smooth;
 }
 
-/* Estilo para el formulario en hover */
-form input:focus,
-form input:hover {
-  border-color: #10b981; /* Tailwind green-500 */
-  outline: none;
-  box-shadow: 0 0 0 1px #10b981;
+/* Fondo general con estilo oscuro + degradado */
+body {
+  background: linear-gradient(to bottom right, var(--aionix-dark-light), var(--aionix-dark));
+  color: var(--aionix-light);
+  font-family: 'Inter', sans-serif;
 }
 
-/* Transición suave para los botones */
+/* Secciones claras alternadas (si deseas usar en HTML) */
+section.bg-white {
+  background-color: var(--aionix-dark-light);
+}
+
+section.bg-gray-50 {
+  background-color: #1f2937;
+}
+
+/* Textos */
+h1, h2, h3 {
+  color: white;
+}
+
+p {
+  color: #d1d5db;
+}
+
+/* Botones y enlaces con estilo verde-cian */
 button,
-a.button {
+a.button,
+a.bg-green-500,
+a.bg-blue-600,
+button.bg-green-500 {
+  background: linear-gradient(to right, var(--aionix-green), var(--aionix-blue));
+  border: none;
+  color: white;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 197, 247, 0.2);
 }
 
 button:hover,
-a.button:hover {
+a.button:hover,
+a.bg-green-500:hover,
+a.bg-blue-600:hover,
+button.bg-green-500:hover {
   transform: scale(1.03);
+  filter: brightness(1.15);
+  box-shadow: 0 6px 16px rgba(0, 197, 247, 0.35);
 }
 
-/* Personaliza el fondo del héroe si usas imagen */
+/* Inputs del formulario */
+form input,
+form textarea {
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #9ca3af;
+}
+
+form input:focus,
+form input:hover {
+  border-color: var(--aionix-green);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--aionix-green);
+}
+
+/* Fondo héroe si usas imagen */
 .hero-background {
   background: url('/assets/bg-hero.jpg') center/cover no-repeat;
 }
+
+/* WhatsApp flotante animado */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 10px rgba(0, 197, 247, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Footer */
+footer {
+  background-color: var(--aionix-dark-light);
+  color: #9ca3af;
+}
+
+footer a {
+  color: var(--aionix-blue);
+}
+
+footer a:hover {
+  color: var(--aionix-green);
+}
+
+/* Íconos de listas */
+ul li::marker {
+  color: var(--aionix-green);
+}
+
+
+@keyframes logoIntro {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.animate-logoIntro {
+  animation: logoIntro 3.2s ease-in-out forwards;
+}
+
+

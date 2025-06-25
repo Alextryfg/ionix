@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Automatización de Atención al Cliente | AIONIX</title>
-  <meta name="description" content="AIONIX automatiza la atención al cliente con inteligencia artificial. Ideal para restaurantes, clínicas y negocios locales.">
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="description"
+    content="AIONIX automatiza la atención al cliente con inteligencia artificial. Ideal para restaurantes, clínicas y negocios locales.">
 
-  <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBD52DZTB"></script>
-    <script>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/icono.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icono.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AIONIX - Automatiza tu atención al cliente con IA" />
+  <meta property="og:description"
+    content="Responde por WhatsApp 24/7 con IA. Ideal para restaurantes, clínicas, peluquerías. Instalación en 7 días." />
+  <meta property="og:image" content="https://www.aionix.com/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.aionix.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIONIX - Atención al cliente automatizada con IA" />
+  <meta name="twitter:description"
+    content="AIONIX ayuda a negocios locales a automatizar su WhatsApp con inteligencia artificial." />
+  <meta name="twitter:image" content="https://www.aionix.com/assets/og-image.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.aionix.com/" />
+
+  <!-- SEO -->
+  <meta name="keywords"
+    content="automatización atención al cliente, inteligencia artificial para restaurantes, IA clínicas dentales, chatbot WhatsApp" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBD52DZTB"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-9WBD52DZTB');
-    </script>
+  </script>
 
-
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- SEO básico -->
-  <meta name="keywords" content="automatización atención al cliente, inteligencia artificial para restaurantes, IA clínicas dentales, chatbot WhatsApp" />
-  <link rel="icon" href="/assets/logo.png" />
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <!-- WhatsApp Floating -->
-  <style>
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
-  </style>
- <link rel="stylesheet" href="/css/custom.css">
+  <!-- Estilo personalizado -->
+  <link rel="stylesheet" href="/css/custom.css" />
 </head>
-<body class="bg-white text-gray-900 scroll-smooth font-sans">
+
+<body class="scroll-smooth font-sans">
+
+    <!-- Preloader -->
+<!-- Preloader -->
+<!-- PRELOADER ANIMADO -->
+<div id="preloader" class="fixed inset-0 bg-[#292929] z-50 flex items-center justify-center">
+  <img
+    src="/assets/logo.png"
+    alt="AIONIX Logo"
+    class="w-[80vw] max-w-[600px] animate-logoIntro"
+  />
+</div>
+
 
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-100">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Automatiza tu atención al cliente en minutos</h1>
-    <p class="text-lg sm:text-xl mb-6 max-w-2xl">Responde en WhatsApp 24/7 sin contratar a nadie más. Instalación en 7 días. Resultados desde el primer día.</p>
-    <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition-all">Quiero automatizar mi negocio</a>
-  </section>
+<section class="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center text-center px-6"
+    style="background-image: url('/assets/bg-hero2.jpg');">
+  <h1 class="text-4xl sm:text-5xl font-bold mb-4">Automatiza tu atención al cliente en minutos</h1>
+  <p class="text-lg sm:text-xl mb-6 max-w-2xl">Responde en WhatsApp 24/7 sin contratar a nadie más.</p>
+  <a href="https://wa.me/671267070"
+    class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition-all">
+    Quiero automatizar mi negocio
+  </a>
+</section>
+
 
   <!-- QUÉ OFRECEMOS -->
-  <section class="py-16 px-6 bg-white">
+  <section class="py-16 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">¿Qué hacemos en AIONIX?</h2>
       <ul class="text-lg space-y-4 text-left sm:text-center">
@@ -61,7 +95,7 @@
   </section>
 
   <!-- A QUIÉN AYUDAMOS -->
-  <section class="py-16 px-6 bg-gray-50">
+  <section class="py-16 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">¿Es esto para ti?</h2>
       <p class="text-lg mb-4">AIONIX está pensado para negocios locales como:</p>
@@ -75,7 +109,7 @@
   </section>
 
   <!-- CÓMO TRABAJAMOS -->
-  <section class="py-16 px-6 bg-white">
+  <section class="py-16 px-6">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">¿Cómo trabajamos?</h2>
       <p class="text-lg mb-6">Instalamos y configuramos todo por ti. Estas son las herramientas que usamos:</p>
@@ -89,47 +123,57 @@
   </section>
 
   <!-- QUIÉNES SOMOS -->
-  <section class="py-16 px-6 bg-gray-50">
+  <section class="py-16 px-6">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">¿Quién está detrás de AIONIX?</h2>
-      <p class="text-lg">Soy [Tu Nombre], fundador de AIONIX. Ayudo a negocios físicos a automatizar su atención al cliente con IA y tecnología simple. Tú solo te enfocas en tu negocio, nosotros en que funcione sin interrupciones.</p>
+      <p class="text-lg">Soy [Tu Nombre], fundador de AIONIX. Ayudo a negocios físicos a automatizar su atención
+        al cliente con IA y tecnología simple. Tú solo te enfocas en tu negocio, nosotros en que funcione sin
+        interrupciones.</p>
     </div>
   </section>
 
   <!-- CTA FINAL -->
-  <section class="py-16 px-6 bg-green-50 text-center">
+  <section class="py-16 px-6 text-center">
     <h2 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h2>
     <p class="text-lg mb-6">Escríbenos por WhatsApp o agenda una llamada. Respondemos en menos de 1 hora.</p>
     <div class="flex justify-center gap-4 flex-wrap">
-      <a href="https://wa.me/671267070" class="bg-green-500 text-white px-6 py-3 rounded-xl text-lg shadow-md">Hablar por WhatsApp</a>
-      <a href="https://calendly.com/tunombre/aionix" class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg shadow-md">Agendar llamada</a>
+      <a href="https://wa.me/671267070"
+        class="bg-green-500 text-white px-6 py-3 rounded-xl text-lg shadow-md">Hablar por WhatsApp</a>
+      <a href="https://calendly.com/tunombre/aionix"
+        class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg shadow-md">Agendar llamada</a>
     </div>
-    <!-- Formulario básico -->
-    <form class="mt-8 max-w-md mx-auto space-y-4">
-      <input type="text" placeholder="Tu nombre" class="w-full p-3 border rounded-xl" required />
-      <input type="tel" placeholder="Tu WhatsApp" class="w-full p-3 border rounded-xl" required />
-      <input type="text" placeholder="Tu negocio" class="w-full p-3 border rounded-xl" required />
-      <button type="submit" class="w-full bg-green-500 text-white p-3 rounded-xl font-bold">Quiero más información</button>
+
+    <!-- Formulario -->
+    <form class="mt-8 max-w-md mx-auto space-y-4"
+      action="https://n8n-railway-custom-production-14ae.up.railway.app/webhook-test/3a2f9757-614f-4a5f-810e-7e099c3b3caa"
+      method="POST">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="/gracias.html">
+      <input type="text" name="nombre" placeholder="Tu nombre" class="w-full p-3 border rounded-xl" required />
+      <input type="tel" name="telefono" placeholder="Tu WhatsApp" class="w-full p-3 border rounded-xl" required />
+      <input type="text" name="negocio" placeholder="Tu negocio" class="w-full p-3 border rounded-xl" required />
+      <button type="submit"
+        class="w-full bg-green-500 text-white p-3 rounded-xl font-bold hover:brightness-110">Quiero más
+        información</button>
     </form>
   </section>
 
-  <!-- WhatsApp float -->
-  <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float">
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/671267070" class="whatsapp-float">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-12 h-12" />
   </a>
 
-  <footer class="text-center text-sm py-6 text-gray-500">
-    © 2025 AIONIX · Automatización con IA · <a href="#" class="underline">Política de privacidad</a>
+  <!-- Footer -->
+  <footer class="text-center text-sm py-6">
+    © 2025 AIONIX · Automatización con IA ·
+    <a href="/politica-privacidad.html" class="underline">Política de privacidad</a>
   </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
-</script>
-
-<script src="/js/main.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
+  <script src="/js/main.js"></script>
 </body>
+
 </html>
