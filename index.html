@@ -1,334 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aionix – Soluciones de IA y Automatización para tu Negocio</title>
-  <meta name="description" content="Aionix: Agencia de inteligencia artificial y automatización. Chatbots, integración de procesos, consultoría y soluciones personalizadas para empresas que buscan eficiencia y crecimiento.">
-  <meta name="keywords" content="IA, inteligencia artificial, automatización, chatbots, consultoría, integración, Aionix, N8N, Notion, Make, Zapier, pymes, digitalización">
-  <meta name="author" content="Aionix">
-  <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automatización de Atención al Cliente | AIONIX</title>
+  <meta name="description" content="AIONIX automatiza la atención al cliente con inteligencia artificial. Ideal para restaurantes, clínicas y negocios locales.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- SEO básico -->
+  <meta name="keywords" content="automatización atención al cliente, inteligencia artificial para restaurantes, IA clínicas dentales, chatbot WhatsApp" />
+  <link rel="icon" href="/assets/logo.png" />
+
+  <!-- WhatsApp Floating -->
   <style>
-    :root {
-      --main-color: #2d3a4b;
-      --accent-color: #01c8a7;
-      --bg-color: #f8fafc;
-      --text-color: #222;
-      --radius: 16px;
-      --shadow: 0 8px 32px rgba(44, 62, 80, 0.09);
-      --transition: 0.3s cubic-bezier(.4,0,.2,1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    header {
-      background: linear-gradient(90deg, var(--main-color) 60%, var(--accent-color) 100%);
-      color: #fff;
-      padding: 3rem 1rem 2rem 1rem;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-    header h1 {
-      font-size: 2.8rem;
-      letter-spacing: -1px;
-      margin-bottom: 0.5rem;
-      font-weight: 800;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-btn {
-      background: var(--accent-color);
-      color: #fff;
-      padding: 1rem 2.5rem;
-      border: none;
-      border-radius: var(--radius);
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      cursor: pointer;
-      box-shadow: 0 4px 16px rgba(1, 200, 167, 0.12);
-      transition: background var(--transition), transform var(--transition);
-      margin-top: 1rem;
-    }
-    .cta-btn:hover {
-      background: #00b49c;
-      transform: translateY(-2px) scale(1.04);
-    }
-    section {
-      max-width: 1100px;
-      margin: 2.5rem auto;
-      padding: 1.5rem;
-      background: #fff;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 2rem;
-      animation: fadeIn 1s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(40px);}
-      to { opacity: 1; transform: none;}
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-    }
-    .feature {
-      flex: 1 1 220px;
-      background: var(--bg-color);
-      border-radius: var(--radius);
-      padding: 1.5rem 1rem;
-      box-shadow: 0 2px 8px rgba(44,62,80,0.05);
-      transition: box-shadow var(--transition), transform var(--transition);
-      min-width: 220px;
-    }
-    .feature:hover {
-      box-shadow: 0 8px 32px rgba(44,62,80,0.12);
-      transform: translateY(-3px) scale(1.03);
-    }
-    .feature h3 {
-      color: var(--main-color);
-      margin-bottom: 0.5rem;
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-    .testimonials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .testimonial {
-      flex: 1 1 300px;
-      background: #f1f5f9;
-      border-radius: var(--radius);
-      padding: 1.25rem 1rem;
-      font-size: 1rem;
-      color: #444;
-      box-shadow: 0 2px 8px rgba(44,62,80,0.04);
-      position: relative;
-    }
-    .testimonial::before {
-      content: "“";
-      font-size: 2.5rem;
-      color: var(--accent-color);
-      position: absolute;
-      top: 8px; left: 16px;
-      opacity: 0.12;
-    }
-    .testimonial strong {
-      display: block;
-      margin-top: 1rem;
-      color: var(--main-color);
-      font-size: 1.05rem;
-    }
-    .clientes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .cliente {
-      flex: 1 1 200px;
-      background: #e0f7fa;
-      border-radius: var(--radius);
-      padding: 1rem;
-      color: #00695c;
-      font-size: 1rem;
-      font-weight: 500;
-      box-shadow: 0 1px 4px rgba(1,200,167,0.04);
-    }
-    .proceso {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .paso {
-      flex: 1 1 200px;
-      background: #f5f5f5;
-      border-radius: var(--radius);
-      padding: 1rem;
-      color: #333;
-      font-size: 1rem;
-      font-weight: 500;
-      box-shadow: 0 1px 4px rgba(44,62,80,0.04);
-      text-align: center;
-    }
-    form {
-      max-width: 420px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      animation: fadeIn 1.2s;
-    }
-    form input, form textarea {
-      padding: 0.85rem;
-      border: 1px solid #d2d6dc;
-      border-radius: var(--radius);
-      font-size: 1rem;
-      font-family: inherit;
-      resize: none;
-      transition: border var(--transition);
-    }
-    form input:focus, form textarea:focus {
-      border: 1.5px solid var(--accent-color);
-      outline: none;
-    }
-    form button {
-      background: var(--main-color);
-      color: #fff;
-      padding: 0.9rem 2rem;
-      border: none;
-      border-radius: var(--radius);
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background var(--transition), transform var(--transition);
-    }
-    form button:hover {
-      background: var(--accent-color);
-      transform: translateY(-2px) scale(1.03);
-    }
-    .success-message {
-      color: var(--accent-color);
-      font-weight: 700;
-      text-align: center;
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-    @media (max-width: 900px) {
-      .features, .testimonials, .clientes, .proceso {
-        flex-direction: column;
-      }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
     }
   </style>
+ <link rel="stylesheet" href="/css/custom.css">
 </head>
-<body>
-  <header>
-    <h1>Aionix</h1>
-    <p>Impulsa tu negocio con inteligencia artificial y automatización. Soluciones a medida, resultados inmediatos.</p>
-    <button class="cta-btn" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});">
-      Solicita tu diagnóstico gratis
-    </button>
-  </header>
+<body class="bg-white text-gray-900 scroll-smooth font-sans">
 
-  <section>
-    <div class="features">
-      <div class="feature">
-        <h3>Chatbots Inteligentes</h3>
-        <p>Desarrollo de asistentes virtuales personalizados con ChatGPT, WhatsApp y web.</p>
-      </div>
-      <div class="feature">
-        <h3>Automatización de Procesos</h3>
-        <p>Automatiza tareas repetitivas e integra tus herramientas favoritas con N8N, Make o Zapier.</p>
-      </div>
-      <div class="feature">
-        <h3>Integración de Flujos</h3>
-        <p>Centraliza la gestión de tu empresa integrando Notion, CRMs y otras plataformas clave.</p>
-      </div>
-      <div class="feature">
-        <h3>Consultoría en Digitalización</h3>
-        <p>Diagnóstico, estrategia y acompañamiento para digitalizar y escalar tu negocio con IA.</p>
-      </div>
-      <div class="feature">
-        <h3>Soluciones Personalizadas</h3>
-        <p>Desarrollamos herramientas de IA a medida para tus retos y objetivos específicos.</p>
-      </div>
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-100">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Automatiza tu atención al cliente en minutos</h1>
+    <p class="text-lg sm:text-xl mb-6 max-w-2xl">Responde en WhatsApp 24/7 sin contratar a nadie más. Instalación en 7 días. Resultados desde el primer día.</p>
+    <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition-all">Quiero automatizar mi negocio</a>
+  </section>
+
+  <!-- QUÉ OFRECEMOS -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">¿Qué hacemos en AIONIX?</h2>
+      <ul class="text-lg space-y-4 text-left sm:text-center">
+        <li>✅ Respuestas automáticas por WhatsApp</li>
+        <li>✅ Confirmación y gestión de citas</li>
+        <li>✅ Recordatorios automáticos</li>
+        <li>✅ Centralización de mensajes (WhatsApp, IG, Web)</li>
+        <li>✅ Integración con tus herramientas (Notion, Sheets...)</li>
+      </ul>
     </div>
   </section>
 
-  <section>
-    <h2 style="text-align:center; color:var(--main-color); margin-bottom:1.5rem;">Testimonios de Clientes</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        Gracias a <strong>Aionix</strong>, automatizamos la gestión de leads y la atención al cliente. Ahora ahorramos más de 10 horas semanales y nuestros clientes reciben respuestas inmediatas.
-        <strong>— Ana, Directora de Operaciones</strong>
-      </div>
-      <div class="testimonial">
-        La integración de IA en nuestros procesos internos nos permitió escalar sin perder calidad. El acompañamiento fue impecable y la automatización de procesos superó nuestras expectativas.
-        <strong>— Carlos, CEO de Startup</strong>
-      </div>
-      <div class="testimonial">
-        Automatizamos tareas repetitivas y mejoramos la experiencia de nuestros clientes. Recomiendo Aionix a cualquier pyme que busque eficiencia y resultados rápidos.
-        <strong>— Laura, Consultora Digital</strong>
-      </div>
+  <!-- A QUIÉN AYUDAMOS -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">¿Es esto para ti?</h2>
+      <p class="text-lg mb-4">AIONIX está pensado para negocios locales como:</p>
+      <ul class="text-lg space-y-2">
+        <li>🍽 Restaurantes y cafeterías</li>
+        <li>🦷 Clínicas dentales</li>
+        <li>💆 Centros de estética y peluquerías</li>
+        <li>🧘 Estudios de yoga o entrenamiento</li>
+      </ul>
     </div>
   </section>
 
-  <section>
-    <h2 style="text-align:center; color:var(--main-color); margin-bottom:1.5rem;">¿Para quién es Aionix?</h2>
-    <div class="clientes">
-      <div class="cliente">Emprendedores y freelancers que quieren escalar sin aumentar su carga de trabajo.</div>
-      <div class="cliente">Pymes que buscan digitalizar y automatizar procesos administrativos, ventas o atención al cliente.</div>
-      <div class="cliente">Equipos que necesitan integrar herramientas y ahorrar tiempo en tareas repetitivas.</div>
+  <!-- CÓMO TRABAJAMOS -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">¿Cómo trabajamos?</h2>
+      <p class="text-lg mb-6">Instalamos y configuramos todo por ti. Estas son las herramientas que usamos:</p>
+      <ul class="text-lg space-y-4">
+        <li>🧠 GPT para responder como si fuera un humano</li>
+        <li>🔄 N8N para automatizar tareas</li>
+        <li>📲 WhatsApp API para integrar atención directa</li>
+        <li>📅 Google Calendar, Notion u otras herramientas</li>
+      </ul>
     </div>
   </section>
 
-  <section>
-    <h2 style="text-align:center; color:var(--main-color); margin-bottom:1.5rem;">¿Cómo trabajamos?</h2>
-    <div class="proceso">
-      <div class="paso"><strong>1. Análisis y diagnóstico</strong><br>Analizamos tus procesos actuales e identificamos cuellos de botella.</div>
-      <div class="paso"><strong>2. Prototipado rápido</strong><br>Diseñamos y probamos soluciones usando tecnologías líderes.</div>
-      <div class="paso"><strong>3. Implementación y formación</strong><br>Implementamos y capacitamos a tu equipo.</div>
-      <div class="paso"><strong>4. Soporte continuo</strong><br>Acompañamiento y mejora continua para asegurar resultados.</div>
+  <!-- QUIÉNES SOMOS -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">¿Quién está detrás de AIONIX?</h2>
+      <p class="text-lg">Soy [Tu Nombre], fundador de AIONIX. Ayudo a negocios físicos a automatizar su atención al cliente con IA y tecnología simple. Tú solo te enfocas en tu negocio, nosotros en que funcione sin interrupciones.</p>
     </div>
   </section>
 
-  <section>
-    <h2 style="text-align:center; color:var(--main-color); margin-bottom:1.5rem;">Solicita tu diagnóstico gratis</h2>
-    <form id="lead-form">
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <input type="text" name="empresa" placeholder="Empresa (opcional)">
-      <textarea name="mensaje" rows="3" placeholder="¿En qué podemos ayudarte?" required></textarea>
-      <button type="submit">Quiero ahorrar tiempo y crecer</button>
-      <div class="success-message" id="success-message" style="display:none;">¡Gracias! Te contactaremos en menos de 24h.</div>
+  <!-- CTA FINAL -->
+  <section class="py-16 px-6 bg-green-50 text-center">
+    <h2 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h2>
+    <p class="text-lg mb-6">Escríbenos por WhatsApp o agenda una llamada. Respondemos en menos de 1 hora.</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="https://wa.me/671267070" class="bg-green-500 text-white px-6 py-3 rounded-xl text-lg shadow-md">Hablar por WhatsApp</a>
+      <a href="https://calendly.com/tunombre/aionix" class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg shadow-md">Agendar llamada</a>
+    </div>
+    <!-- Formulario básico -->
+    <form class="mt-8 max-w-md mx-auto space-y-4">
+      <input type="text" placeholder="Tu nombre" class="w-full p-3 border rounded-xl" required />
+      <input type="tel" placeholder="Tu WhatsApp" class="w-full p-3 border rounded-xl" required />
+      <input type="text" placeholder="Tu negocio" class="w-full p-3 border rounded-xl" required />
+      <button type="submit" class="w-full bg-green-500 text-white p-3 rounded-xl font-bold">Quiero más información</button>
     </form>
   </section>
 
-  <footer style="text-align:center; color:#888; padding:2rem 1rem 1rem 1rem; font-size:0.98rem;">
-    © 2025 Aionix – Agencia de IA y Automatización. Todos los derechos reservados.
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-12 h-12" />
+  </a>
+
+  <footer class="text-center text-sm py-6 text-gray-500">
+    © 2025 AIONIX · Automatización con IA · <a href="#" class="underline">Política de privacidad</a>
   </footer>
-
-  <script>
-    // Animación de entrada para secciones al hacer scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animation = "fadeIn 1s";
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('section').forEach(section => observer.observe(section));
-
-    // Manejo del formulario (simulación de envío)
-    document.getElementById("lead-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      document.getElementById("success-message").style.display = "block";
-      setTimeout(() => {
-        document.getElementById("lead-form").reset();
-        document.getElementById("success-message").style.display = "none";
-      }, 4000);
-    });
-  </script>
+<script src="/js/main.js"></script>
 </body>
 </html>

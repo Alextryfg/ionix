@@ -1,0 +1,30 @@
+/* custom.css */
+
+/* Si quieres personalizar scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo para el formulario en hover */
+form input:focus,
+form input:hover {
+  border-color: #10b981; /* Tailwind green-500 */
+  outline: none;
+  box-shadow: 0 0 0 1px #10b981;
+}
+
+/* Transición suave para los botones */
+button,
+a.button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+a.button:hover {
+  transform: scale(1.03);
+}
+
+/* Personaliza el fondo del héroe si usas imagen */
+.hero-background {
+  background: url('/assets/bg-hero.jpg') center/cover no-repeat;
+}
