@@ -56,30 +56,31 @@
 
 <body class="scroll-smooth font-sans">
 
-<!-- Logo flotante (se moverá del preloader al hero) -->
-<div id="logo-fly" class="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 transition-all duration-1000">
-  <img src="/assets/logo.png" alt="AIONIX Logo" class="w-[80vw] max-w-[600px]" />
-</div>
+  <!-- Logo flotante (se moverá del preloader al hero) -->
+  <div id="logo-fly"
+    class="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 transition-all duration-1000">
+    <img src="/assets/logo-rm.png" alt="AIONIX Logo" class="w-[80vw] max-w-[600px]" />
+  </div>
 
-<!-- Preloader de fondo oscuro -->
-<div id="preloader-bg" class="fixed inset-0 bg-[#292929] z-40"></div>
+  <!-- Preloader de fondo oscuro -->
+  <div id="preloader-bg" class="fixed inset-0 bg-[#292929] z-40"></div>
 
 
 
   <!-- HERO -->
-<section class="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center text-center px-6"
-    style="background-color: #292929;">
- <!-- Logo destino en el hero -->
-<div id="hero-logo-anchor" class="relative w-full flex justify-center mb-6 h-[120px]">
-  <!-- Aquí aparecerá el logo después de animarse -->
-</div>
+  <section class="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center text-center px-6"
+    style="background-image: url('/assets/bg-hero.jpg');">
+    <!-- Logo destino en el hero -->
+    <div id="hero-logo-anchor" class="relative w-full flex justify-center mb-6 h-[120px]">
+      <!-- Aquí aparecerá el logo después de animarse -->
+    </div>
     <h1 class="text-4xl sm:text-5xl font-bold mb-4">Automatiza tu atención al cliente en minutos</h1>
-  <p class="text-lg sm:text-xl mb-6 max-w-2xl">Responde en WhatsApp 24/7 sin contratar a nadie más.</p>
-  <a href="https://wa.me/+34671267070"
-    class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition-all">
-    Quiero automatizar mi negocio
-  </a>
-</section>
+    <p class="text-lg sm:text-xl mb-6 max-w-2xl">Responde en WhatsApp 24/7 sin contratar a nadie más.</p>
+    <a href="https://wa.me/+34671267070"
+      class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition-all">
+      Quiero automatizar mi negocio
+    </a>
+  </section>
 
 
   <!-- QUÉ OFRECEMOS -->
@@ -124,22 +125,34 @@
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-gray-700 text-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Clientes satisfechos</h2>
-   <div class="grid sm:grid-cols-2 gap-6">
-  <div class="gray-400 p-6 rounded-xl shadow border border-white">
-    <p class="italic">"Gracias a AIONIX ahora no pierdo reservas por no contestar rápido."</p>
-    <p class="mt-4 font-semibold">— Laura, Dueña de restaurante</p>
-  </div>
-  <div class="gray-500 p-6 rounded-xl shadow border border-white">
-    <p class="italic">"Automatizamos las citas y ahorramos horas cada semana."</p>
-    <p class="mt-4 font-semibold">— Daniel, Clínica dental</p>
-  </div>
-</div>
+<section class="py-16 px-6 bg-gray-700 text-white overflow-hidden">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Clientes satisfechos</h2>
 
+    <div id="carousel" class="relative w-full overflow-hidden">
+      <div id="track" class="flex gap-6">
+        <div class="testimonial-card">
+          <div class="text-xl mb-2">★ ★ ★ ★ ★</div>
+          <p class="italic text-sm">"Gracias a AIONIX ahora no pierdo reservas por no contestar rápido."</p>
+          <p class="mt-4 font-semibold">— Laura, Dueña de restaurante</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="text-xl mb-2">★ ★ ★ ★ ☆</div>
+          <p class="italic text-sm">"Automatizamos las citas y ahorramos horas cada semana."</p>
+          <p class="mt-4 font-semibold">— Daniel, Clínica dental</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="text-xl mb-2">★ ★ ★ ★ ★</div>
+          <p class="italic text-sm">"El chatbot responde al instante, como un recepcionista 24/7."</p>
+          <p class="mt-4 font-semibold">— Marta, Estética</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+
+
 
 
   <!-- QUIÉNES SOMOS -->
@@ -157,10 +170,12 @@
     <h2 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h2>
     <p class="text-lg mb-6">Escríbenos por WhatsApp o agenda una llamada. Respondemos en menos de 1 hora.</p>
     <div class="flex justify-center gap-4 flex-wrap">
-      <a href="https://wa.me/+34671267070"
+      <a href="https://wa.me/+34671267070" target="_blank" rel="noopener noreferrer"
         class="bg-green-500 text-white px-6 py-3 rounded-xl text-lg shadow-md">Hablar por WhatsApp</a>
-      <a href="https://calendly.com/tunombre/aionix"
-        class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg shadow-md">Agendar llamada</a>
+      <a href="https://calendly.com/alexfuegomez" target="_blank" rel="noopener noreferrer"
+        class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg shadow-md">
+        Agendar llamada
+      </a>
     </div>
 
     <!-- Formulario -->
@@ -173,31 +188,31 @@
       <input type="text" name="nombre" placeholder="Tu nombre" class="w-full p-3 border rounded-xl" required />
       <input type="tel" name="telefono" placeholder="Tu WhatsApp" class="w-full p-3 border rounded-xl" required />
       <input type="text" name="negocio" placeholder="Tu negocio" class="w-full p-3 border rounded-xl" required />
-      <button type="submit"
-        class="w-full bg-green-500 text-white p-3 rounded-xl font-bold hover:brightness-110">Quiero más
+      <button type="submit" class="w-full bg-green-500 text-white p-3 rounded-xl font-bold hover:brightness-110">Quiero
+        más
         información</button>
     </form>
   </section>
 
   <section class="py-16 px-6 bg-white">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Preguntas frecuentes</h2>
-    <div class="space-y-4 text-left">
-      <details class="border p-4 rounded-xl">
-        <summary class="font-semibold">¿Necesito saber de tecnología para usar AIONIX?</summary>
-        <p class="mt-2">No, nosotros nos encargamos de todo. Solo tienes que usar WhatsApp como siempre.</p>
-      </details>
-      <details class="border p-4 rounded-xl">
-        <summary class="font-semibold">¿Cuánto cuesta?</summary>
-        <p class="mt-2">Tenemos planes desde 79€/mes, dependiendo de tu negocio y volumen de mensajes.</p>
-      </details>
-      <details class="border p-4 rounded-xl">
-        <summary class="font-semibold">¿Puedo probarlo antes de pagar?</summary>
-        <p class="mt-2">Sí, hacemos una demo gratuita para que veas cómo funciona con tu negocio.</p>
-      </details>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Preguntas frecuentes</h2>
+      <div class="space-y-4 text-left">
+        <details class="border p-4 rounded-xl">
+          <summary class="font-semibold">¿Necesito saber de tecnología para usar AIONIX?</summary>
+          <p class="mt-2">No, nosotros nos encargamos de todo. Solo tienes que usar WhatsApp como siempre.</p>
+        </details>
+        <details class="border p-4 rounded-xl">
+          <summary class="font-semibold">¿Cuánto cuesta?</summary>
+          <p class="mt-2">Tenemos planes desde 79€/mes, dependiendo de tu negocio y volumen de mensajes.</p>
+        </details>
+        <details class="border p-4 rounded-xl">
+          <summary class="font-semibold">¿Puedo probarlo antes de pagar?</summary>
+          <p class="mt-2">Sí, hacemos una demo gratuita para que veas cómo funciona con tu negocio.</p>
+        </details>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- WhatsApp Flotante -->
@@ -214,6 +229,7 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: true });</script>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="/js/main.js"></script>
 </body>
 

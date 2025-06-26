@@ -21,6 +21,11 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+
 /* Secciones claras alternadas (si deseas usar en HTML) */
 section.bg-white {
   background-color: var(--aionix-dark-light);
@@ -161,9 +166,35 @@ ul li::marker {
 #logo-fly.to-hero {
   top: 40px; /* Ajusta según el espacio que quieras respecto al top */
   left: 50%;
-  transform: translateX(-50%) scale(1.4);
+  transform: translateX(-50%) scale(1.7);
   opacity: 1;
 }
+
+.testimonial-card {
+  min-width: 300px;
+  max-width: 300px;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  background-color: #1f2937;
+  flex-shrink: 0;
+  color: white;
+  text-align: left;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
 
 
 
