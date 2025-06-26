@@ -158,4 +158,13 @@ ul li::marker {
   animation: logoIntro 3.2s ease-in-out forwards;
 }
 
+#logo-fly.to-hero {
+  top: 40px; /* Ajusta según el espacio que quieras respecto al top */
+  left: 50%;
+  transform: translateX(-50%) scale(1.4);
+  opacity: 1;
+}
+
+
+
 

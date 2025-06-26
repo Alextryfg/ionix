@@ -1,33 +1,35 @@
-// main.js
+document.addEventListener('DOMContentLoaded', () => {
+  const logoFly = document.getElementById('logo-fly');
+  const preloaderBg = document.getElementById('preloader-bg');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+  // Esperamos 2.5s y movemos el logo hacia arriba
+  setTimeout(() => {
+    if (logoFly) {
+      logoFly.classList.add('to-hero'); // esto lo sube arriba
+    }
 
-      // Simula envío y muestra mensaje
-      alert('¡Gracias por tu interés! Te contactaremos por WhatsApp en breve.');
-
-      // Limpia el formulario
-      form.reset();
-    });
-  }
-
-  // Otras funciones que podrías querer:
-  // - Validar campos
-  // - Scroll al formulario
-  // - Detectar clics en CTA para tracking (GA, etc.)
+    // ⏳ Esperamos a que termine la animación del logo (1s)
+    setTimeout(() => {
+      if (preloaderBg) {
+        preloaderBg.style.transition = 'opacity 1s';
+        preloaderBg.style.opacity = '0';
+        setTimeout(() => preloaderBg.remove(), 1000);
+      }
+    }, 1000); // Espera a que termine la animación de logo
+  }, 2500);
 });
 
 
 
 
-  // Elimina el preloader tras la animación
-  setTimeout(() => {
-    const preloader = document.getElementById("preloader");
-    if (preloader) preloader.remove(); // o preloader.style.display = "none";
-  }, 3200); // tiempo igual al de la animación
+
+
+setTimeout(() => {
+  heroAnchor.appendChild(logoFly);
+  logoFly.classList.remove('fixed', 'to-hero');
+  logoFly.classList.add('relative', 'transform-none', 'scale-[1.2]');
+  logoFly.style.transform = '';
+}, 3500);
 
 
 

@@ -56,24 +56,26 @@
 
 <body class="scroll-smooth font-sans">
 
-    <!-- Preloader -->
-<!-- Preloader -->
-<!-- PRELOADER ANIMADO -->
-<div id="preloader" class="fixed inset-0 bg-[#292929] z-50 flex items-center justify-center">
-  <img
-    src="/assets/logo.png"
-    alt="AIONIX Logo"
-    class="w-[80vw] max-w-[600px] animate-logoIntro"
-  />
+<!-- Logo flotante (se moverá del preloader al hero) -->
+<div id="logo-fly" class="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 transition-all duration-1000">
+  <img src="/assets/logo.png" alt="AIONIX Logo" class="w-[80vw] max-w-[600px]" />
 </div>
+
+<!-- Preloader de fondo oscuro -->
+<div id="preloader-bg" class="fixed inset-0 bg-[#292929] z-40"></div>
+
 
 
   <!-- HERO -->
 <section class="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center text-center px-6"
-    style="background-image: url('/assets/bg-hero2.jpg');">
-  <h1 class="text-4xl sm:text-5xl font-bold mb-4">Automatiza tu atención al cliente en minutos</h1>
+    style="background-color: #292929;">
+ <!-- Logo destino en el hero -->
+<div id="hero-logo-anchor" class="relative w-full flex justify-center mb-6 h-[120px]">
+  <!-- Aquí aparecerá el logo después de animarse -->
+</div>
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Automatiza tu atención al cliente en minutos</h1>
   <p class="text-lg sm:text-xl mb-6 max-w-2xl">Responde en WhatsApp 24/7 sin contratar a nadie más.</p>
-  <a href="https://wa.me/671267070"
+  <a href="https://wa.me/+34671267070"
     class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg shadow-lg transition-all">
     Quiero automatizar mi negocio
   </a>
@@ -155,7 +157,7 @@
     <h2 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h2>
     <p class="text-lg mb-6">Escríbenos por WhatsApp o agenda una llamada. Respondemos en menos de 1 hora.</p>
     <div class="flex justify-center gap-4 flex-wrap">
-      <a href="https://wa.me/671267070"
+      <a href="https://wa.me/+34671267070"
         class="bg-green-500 text-white px-6 py-3 rounded-xl text-lg shadow-md">Hablar por WhatsApp</a>
       <a href="https://calendly.com/tunombre/aionix"
         class="bg-blue-600 text-white px-6 py-3 rounded-xl text-lg shadow-md">Agendar llamada</a>
@@ -199,7 +201,7 @@
 
 
   <!-- WhatsApp Flotante -->
-  <a href="https://wa.me/671267070" class="whatsapp-float">
+  <a href="https://wa.me/+34671267070" class="whatsapp-float">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-12 h-12" />
   </a>
 
