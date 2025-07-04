@@ -160,13 +160,13 @@ ul li::marker {
 }
 
 .animate-logoIntro {
-  animation: logoIntro 3.2s ease-in-out forwards;
+  animation: logoIntro 2.5s ease-in-out forwards;
 }
 
 #logo-fly.to-hero {
-  top: 40px; /* Ajusta según el espacio que quieras respecto al top */
+  top: 0px; /* Ajusta según el espacio que quieras respecto al top */
   left: 50%;
-  transform: translateX(-50%) scale(1.7);
+  transform: translateX(-50%) scale(1.1);
   opacity: 1;
 }
 
